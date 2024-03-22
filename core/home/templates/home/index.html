@@ -9,5 +9,32 @@
     <h1>This template is return by django server.</h1>
     
     {{peoples}}
+
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Can vote</th>
+        </tr>
+
+        {% for people in peoples%}
+
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+            <td {% if people.age <= 18 %} style = "background:red" {% endif %}>
+                {% if people.age >= 18 %}
+                Yes
+                {% else %}
+                No
+                {% endif %}
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
 </body>
 </html>

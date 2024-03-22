@@ -7,6 +7,7 @@ def home(request):
         {'name': 'Abhishek', 'age': 26},
         {'name': 'Aryan', 'age': 23},
         {'name': 'Ashutosh', 'age': 21},
+        {'name': 'Pragati', 'age': 17}
 
     ] 
     return render(request, "home/index.html", context = {'peoples' : peoples})
