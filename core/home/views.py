@@ -3,7 +3,13 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return render(request, "home/index.html")
+    peoples = [
+        {'name': 'Abhishek', 'age': 26},
+        {'name': 'Aryan', 'age': 23},
+        {'name': 'Ashutosh', 'age': 21},
+
+    ] 
+    return render(request, "home/index.html", context = {'peoples' : peoples})
 
 def success_page(request):
     return HttpResponse("<h1>Hey this is a success page</h1>")
