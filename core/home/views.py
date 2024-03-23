@@ -11,11 +11,21 @@ def home(request):
 
     ] 
 
+    
+
     vegetables = ['Pumpkin', 'Tomato', 'Potato']
     
     
 
     return render(request, "home/index.html", context = {'peoples' : peoples, 'vegetables' : vegetables })
+
+def about(request):
+    context = {'page' : 'About'}
+    return render(request, "home/about.html", context)
+
+def contact(request):
+    context = {'page' : 'Contact'}
+    return render(request, "home/contact.html", context)
 
 def success_page(request):
     return HttpResponse("<h1>Hey this is a success page</h1>")

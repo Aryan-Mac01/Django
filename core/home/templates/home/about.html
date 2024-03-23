@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Tutorial</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block start %}
     <h1>This is about page.</h1>
-    
-    
-    
 
-</body>
-</html>
+    <a href="/">
+        Home
+    </a>
+
+    <a href="/contact/">
+        contact
+    </a>
+    
+    
+{% endblock %}
