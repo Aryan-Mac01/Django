@@ -6,7 +6,7 @@
     <title>Django Tutorial</title>
 </head>
 <body>
-    <h1>This template is return by django server.</h1>
+    <h1>This is index page.</h1>
     
     {{peoples}}
 
@@ -38,7 +38,24 @@
     </table>
 
     <p>
-        {{text|truncatechars:80}} 
+        
+
+        {% if "cucumber" in vegetables %}
+            Yes Available.
+
+        {% elif "Tomato" in vegetables %}
+
+            Yes Available
+
+        {% else %}
+
+            No Available
+
+        {% endif %}
+    </p>
+
+    <p>
+
     </p>
 
 </body>
