@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+#CRUD -> Create, Read, Update, Delete
 
 class Student(models.Model):
     #id = models.AutoField() --> ye default field hoti jo django khud se automatic add kardeta
@@ -16,3 +17,5 @@ class Car(models.Model):
     car_name = models.CharField(max_length = 500)
     speed = models.IntegerField(default = 50)
     
+    def __str__(self) -> str:
+        return self.car_name
