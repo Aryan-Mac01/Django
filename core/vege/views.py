@@ -15,6 +15,9 @@ def receipes(request):
             receipe_description = receipe_description
         )
     
-    return redirect('/receipes/')
+        return redirect('/receipes/')
 
-    return render(request, 'receipes.html')
+    queryset = Receipe.objects.all()
+    context = {'receipes': queryset}
+
+    return render(request, 'receipes.html', context)
