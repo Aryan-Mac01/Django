@@ -27,6 +27,7 @@ urlpatterns = [
     path('contact/', contact, name="contact"),
 
     path('about/', about, name="about"),
+    path('login/', login_page, name="login_page"),
 
     path('success_page/', success_page, name="success_page"),
 

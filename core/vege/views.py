@@ -21,3 +21,7 @@ def receipes(request):
     context = {'receipes': queryset}
 
     return render(request, 'receipes.html', context)
+
+
+def login_page(request):
+    return render(request, 'login.html')
