@@ -4,7 +4,7 @@
 <div class="container mt-5 ">
     <form class="col- mx-auto card p-3 shadow-lg" method = "post" enctype="multipart/form-data">
         {% csrf_token %}
-        <h2>Login</h2>
+        <h2>Register</h2>
         <hr>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">First Name</label>
@@ -24,7 +24,7 @@
             <textarea class="form-control" name="password" required></textarea>
         </div>
 
-        <p>Don't have an account <a href="/register/">Register</a></p>
+        <p>Already have an account <a href="/login/">Login</a></p>
         
         <button type="submit" class="btn btn-success">Submit</button>
 
